@@ -1,13 +1,13 @@
 {
-    "name": "laravel-notification-channels/lob",
+    "name": "labomatik/lob",
     "description": "Lob.com notifications channel for Laravel 5.3",
-    "homepage": "https://github.com/laravel-notification-channels/lob",
+    "homepage": "https://github.com/labomatik/lob",
     "license": "MIT",
     "authors": [
         {
-            "name": "Mohamed Said",
-            "email": "themsaid@gmail.com",
-            "homepage": "http://themsaid.com",
+            "name": "Christophe Lemoine",
+            "email": "cris@labomatik.com",
+            "homepage": "http://labomatik.com",
             "role": "Developer"
         }
     ],
