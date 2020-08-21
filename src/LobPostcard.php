@@ -17,10 +17,14 @@ class LobPostcard
     protected $front;
 
     /** @var string */
-    protected $message;
+    protected $back;
+
+    /** @var array */
+    protected $merge_variables;
 
     /** @var string */
     protected $size = '4x6';
+
 
     /**
      * @param string $message
@@ -77,13 +81,25 @@ class LobPostcard
     }
 
     /**
-     * @param string $message
+     * @param mixed $back
      *
      * @return $this
      */
-    public function message($message)
+    public function back($back)
     {
-        $this->message = $message;
+        $this->back = $back;
+
+        return $this;
+    }
+
+    /**
+     * @param array $message
+     *
+     * @return $this
+     */
+    public function merge_variables($merge_variables)
+    {
+        $this->merge_variables = $merge_variables;
 
         return $this;
     }
@@ -131,7 +147,8 @@ class LobPostcard
             'to' => $this->toAddress,
             'from' => $this->fromAddress,
             'front' => $this->front,
-            'message' => $this->message,
+            'back' => $this->back,
+            'merge_variables' => $this->merge_variables,
             'size' => $this->size,
         ]);
     }
